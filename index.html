@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLANO DE 30 DIAS PARA VIRAR AUTORIDADE NO LINKEDIN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #000066;
+            background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #000066 0%, #0051ff 100%);
+            color: white;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(-20px, -20px) rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: slideInDown 1s ease-out;
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            animation: slideInUp 1s ease-out 0.3s both;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 81, 255, 0.1);
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #0051ff, #000066);
+            transition: left 0.3s ease;
+        }
+
+        .stat-card:hover::before {
+            left: 0;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 81, 255, 0.2);
+            border-color: #0051ff;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #000066;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .week-section {
+            margin-bottom: 60px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .week-section:nth-child(even) { animation-delay: 0.2s; }
+        .week-section:nth-child(odd) { animation-delay: 0.4s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .week-header {
+            background: linear-gradient(135deg, #000066 0%, #0051ff 100%);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 15px 15px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .week-number {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        .week-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .week-content {
+            background: white;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 10px 30px rgba(0, 81, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .day-item {
+            padding: 25px 30px;
+            border-bottom: 1px solid #f0f4ff;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .day-item:last-child {
+            border-bottom: none;
+        }
+
+        .day-item:hover {
+            background: linear-gradient(90deg, #f8faff, white);
+            transform: translateX(10px);
+        }
+
+        .day-range {
+            color: #0051ff;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .day-range::before {
+            content: '📅';
+            font-size: 1.2rem;
+        }
+
+        .day-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #000066;
+            margin-bottom: 15px;
+        }
+
+        .day-description {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .examples-list {
+            background: #f8faff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #0051ff;
+        }
+
+        .examples-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .examples-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .examples-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #0051ff;
+            font-weight: bold;
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, #000066, #0051ff);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            position: relative;
+            font-style: italic;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            opacity: 0.3;
+        }
+
+        .quote-author {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #000066 0%, #0051ff 100%);
+            color: white;
+            padding: 60px 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            background-size: 20px 20px;
+            animation: sparkle 3s linear infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background: white;
+            color: #000066;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            background: #f0f4ff;
+        }
+
+        .logo-section {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 2px solid #f0f4ff;
+        }
+
+        .logo-section img {
+            max-width: 200px;
+            height: auto;
+            filter: drop-shadow(0 5px 15px rgba(0, 81, 255, 0.2));
+            transition: transform 0.3s ease;
+        }
+
+        .logo-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #0051ff, #000066);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .day-item:hover {
+                transform: none;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>🔥 Plano de 30 Dias</h1>
+            <p class="hero-subtitle">Vire Autoridade no LinkedIn e comece a fechar negócios</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">40%</div>
+                <div class="stat-label">Mais oportunidades com perfil completo</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3×</div>
+                <div class="stat-label">Mais conversões com conexões qualificadas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50%</div>
+                <div class="stat-label">Aumento no engajamento com posts regulares</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">25%</div>
+                <div class="stat-label">Mais negócios que cold calls tradicionais</div>
+            </div>
+        </div>
+
+        <div class="week-section">
+            <div class="week-header">
+                <div class="week-number">Semana 1</div>
+                <div class="week-title">🗓️ Diagnóstico & Otimização (Dias 1–7)</div>
+            </div>
+            <div class="week-content">
+                <div class="day-item">
+                    <div class="day-range">Dia 1–2</div>
+                    <div class="day-title">Auditoria rápida</div>
+                    <div class="day-description">
+                        Revise foto, headline, resumo e seção "Featured".
+                    </div>
+                    <div class="quote-box">
+                        "Não sei nem por onde começar…"
+                        <div class="quote-author">- Manuel Garcia, Diretor Financeiro</div>
+                    </div>
+                    <div class="day-description">
+                        <strong>Solução:</strong> Use nosso Checklist de Elementos Obrigatórios para guiar cada passo.
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-range">Dia 3–5</div>
+                    <div class="day-title">Headlines & Palavras-Chave</div>
+                    <div class="day-description">
+                        Aplique verbos de ação + métricas: ex: "Ajudo empresas a aumentar receita em 30%."
+                    </div>
+                    <div class="examples-list">
+                        <h4>Exemplos de headlines:</h4>
+                        <ul>
+                            <li>"Transformo processos logísticos e reduzo custos em R$ 1 M+"</li>
+                            <li>"Especialista em Marketing Digital | +50% de geração de leads"</li>
+                            <li>"CFO Estratégico – Finanças Corporativas & Otimização de Lucros"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-range">Dia 6–7</div>
+                    <div class="day-title">Seção "Destaques" e Multimídia</div>
+                    <div class="day-description">
+                        Adicione 2 cases breves (PDF de case, vídeo de depoimento ou slides de apresentação).
+                    </div>
+                    <div class="examples-list">
+                        <h4>Exemplos de destaque:</h4>
+                        <ul>
+                            <li>PDF "Case Automação industrial – Redução de 25% de OEE"</li>
+                            <li>Vídeo de 60 s sobre projeto de transformação digital em RH</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="week-section">
+            <div class="week-header">
+                <div class="week-number">Semana 2</div>
+                <div class="week-title">📝 Construção de Conteúdo (Dias 8–15)</div>
+            </div>
+            <div class="week-content">
+                <div class="day-item">
+                    <div class="day-range">Dia 8</div>
+                    <div class="day-title">Definição de 3 pilares de conteúdo</div>
+                    <div class="day-description">
+                        Ex.: inovação, liderança e estudos de caso.
+                    </div>
+                    <div class="examples-list">
+                        <p><strong>Exemplo de mini-post para "inovação":</strong> "💡 Inovação não é só tecnologia: é cultura. Veja como…"</p>
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-range">Dia 9–11</div>
+                    <div class="day-title">Calendário de Publicações (3 posts/semana)</div>
+                    <div class="day-description">
+                        1 Post Longo (1.000–1.200 caracteres): análise de tendência de mercado.<br>
+                        2 Insights rápidos (+ gráfico ou estatística).
+                    </div>
+                    <div class="quote-box">
+                        "Nunca sei o que escrever…"
+                        <div class="quote-author">- Mariana Silva, Sócia</div>
+                    </div>
+                    <div class="examples-list">
+                        <h4>Planejamento sugerido:</h4>
+                        <ul>
+                            <li>Segunda: brainstorming de ideias (5 min) + rascunho (10 min)</li>
+                            <li>Quarta: revisão e formatação (15 min)</li>
+                            <li>Sexta: interação + resposta a comentários (15 min)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-range">Dia 12–15</div>
+                    <div class="day-title">Modelos</div>
+                    <div class="examples-list">
+                        <h4>5 Scripts de post: "Problema → Solução → Chamada":</h4>
+                        <ul>
+                            <li>"Você enfrenta X? Veja como Y resolve em 3 passos…"</li>
+                            <li>"Quando Z falha, resultados caem 40%. Minha solução: …"</li>
+                            <li>"Case: cliente A ganhou +R$ 200 K com…"</li>
+                            <li>"Desafio de liderança? Use este framework…"</li>
+                            <li>"3 aprendizados da minha última implantação de…"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="week-section">
+            <div class="week-header">
+                <div class="week-number">Semana 3</div>
+                <div class="week-title">🤝 Engajamento e Crescimento (Dias 16–23)</div>
+            </div>
+            <div class="week-content">
+                <div class="day-item">
+                    <div class="day-range">Dia 16–18</div>
+                    <div class="day-title">Mapeamento de buyer personas</div>
+                    <div class="day-description">
+                        Use filtros do Sales Navigator para identificar decisores (cargo, setor, localização).
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-range">Dia 19–21</div>
+                    <div class="day-title">5 "Plays" de Engajamento</div>
+                    <div class="examples-list">
+                        <ul>
+                            <li>Comentários de alto valor em posts de referência</li>
+                            <li>Envio de artigos curtos e personalizados por mensagem</li>
+                            <li>Reconhecimento público de conquistas de conexões</li>
+                            <li>Compartilhamento de insights exclusivos em grupos relevantes</li>
+                            <li>Participação ativa em lives e webinars do setor</li>
+                        </ul>
+                    </div>
+                    <div class="quote-box">
+                        "Estou fora da rede há meses…"
+                        <div class="quote-author">- Ricardo Alves, Executivo</div>
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-range">Dia 22–23</div>
+                    <div class="day-title">Automação de Conexões</div>
+                    <div class="examples-list">
+                        <h4>Mensagens personalizadas sem vender de cara:</h4>
+                        <ul>
+                            <li>"Vi seu artigo sobre transformação digital e adorei…"</li>
+                            <li>"Olá, notei sua atuação em ESG na indústria; podemos trocar ideias?"</li>
+                            <li>"Parabéns pelo case de inovação em RH que publicou…"</li>
+                            <li>"Olá, somos da mesma turma de MBA e gostaria de me conectar…"</li>
+                            <li>"Vi que trabalhamos com startups; tenho um insight sobre financiamento…"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="week-section">
+            <div class="week-header">
+                <div class="week-number">Semana 4</div>
+                <div class="week-title">💼 Social Selling & Fechamento de Reuniões (Dias 24–30)</div>
+            </div>
+            <div class="week-content">
+                <div class="day-item">
+                    <div class="day-range">Dia 24–26</div>
+                    <div class="day-title">Sequência de Mensagens (3 toques)</div>
+                    <div class="examples-list">
+                        <ul>
+                            <li><strong>Script 1 (Conexão):</strong> "Oi [Nome], vi seu artigo em X e achei pertinente. Vamos nos conectar?"</li>
+                            <li><strong>Script 2 (Insight):</strong> "Obrigado pela aceitação! Você já considerou adotar Y para aumentar Z em 20%?"</li>
+                            <li><strong>Script 3 (Convite):</strong> "Tenho um whitepaper exclusivo sobre X; podemos agendar um Call rápido?"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-range">Dia 27–28</div>
+                    <div class="day-title">Qualificação Rápida</div>
+                    <div class="day-description">
+                        Use perguntas abertas: "Quais são os maiores desafios em sua área hoje?" "Como estão suas metas de crescimento para 2025?"
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-range">Dia 29–30</div>
+                    <div class="day-title">Agendamento de Reunião</div>
+                    <div class="day-description">
+                        Envie link para calendly ou sistema integrado.
+                    </div>
+                    <div class="quote-box">
+                        "Precisamos mostrar credibilidade antes de qualquer reunião."
+                        <div class="quote-author">- Fernanda Costa, VP</div>
+                    </div>
+                    <div class="day-description">
+                        <strong>Solução:</strong> ofereça webinar exclusivo ou whitepaper premium no convite: "Fernanda, preparei um whitepaper com benchmarks de 2024. Que tal um bate-papo de 15 min?"
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Próximos Passos</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">
+                    Este Plano de 30 Dias mostra o caminho, mas a metodologia completa da OndaSkim integra ferramentas, automações e acompanhamento estratégico para garantir resultados previsíveis mês a mês.
+                </p>
+                <a href="#" class="cta-button">📅 Agendar Reunião Estratégica</a>
+                <a href="https://ondaskim.com/comunidade/" class="cta-button">🗣️Junte-se à Comunidade OndaSkim Talks</a>
+            </div>
+        </div>
+
+        <div class="logo-section">
+            <img src="https://d2bxzineatl84k.cloudfront.net/storage/files/logos/3FG9UOwcJsqN0NmFkFdo9alRlzBj7mE3ELQCwIho.png" alt="OndaSkim Logo">
+        </div>
+    </div>
+</body>
+</html>
